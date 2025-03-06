@@ -2,6 +2,9 @@
 name = "short_default"
 version = "0.1.0"
 edition = "2024"
+license = "MIT OR Apache-2.0"
+description = "Compactly define structs with default values."
+repository = "https://github.com/jonaspleyer/short_default"
 
 [lib]
 proc-macro = true
