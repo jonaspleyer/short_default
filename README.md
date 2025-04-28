@@ -10,3 +10,16 @@
 Avoid writing tedious [Default](https://doc.rust-lang.org/std/default/trait.Default.html)
 implementations by using a simple
 [`default!`](https://docs.rs/short_default/latest/short_default/macro.default.html) macro instead.
+
+```Rust
+use short_default::default;
+
+default! {
+    struct Config {
+        version: (u64, u64, u64) = (0, 1, 0),
+        // This default value will be inferred via
+        // authors: Default::default(),
+        authors: Vec<String>,
+    }
+}
+```
